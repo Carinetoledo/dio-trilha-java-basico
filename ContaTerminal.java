@@ -7,14 +7,13 @@ public class ContaTerminal {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int numero;
-		String agencia;
+		int /*armazena inteiros */numero;
+		String /*armazena texto*/ agencia;
 		String nomeCliente;
-		double saldo;
+		double /*armazenar números com maior magnitude*/ saldo;
 		String sair;
 
 		System.out.println("--------CONTA BANCÁRIA----------");
-		System.out.println();
 		System.out.println("1 - Por favor, digite o número da Conta: (1234)");
 		numero = sc.nextInt();
 
@@ -29,7 +28,7 @@ public class ContaTerminal {
 		saldo = sc.nextDouble();
 
   		System.out.println("0 - Sair -----");
-            	leitura.nextLine();
+		leitura.next();
 
 		System.out.println();
 		System.out.printf("Olá %s, obrigado por criar uma conta"
@@ -41,5 +40,3 @@ public class ContaTerminal {
 	}
 
 }
-
-
