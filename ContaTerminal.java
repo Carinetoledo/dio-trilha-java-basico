@@ -1,42 +1,39 @@
-package desafio;
-
 import java.util.Scanner;
 
 public class ContaTerminal {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		int /*armazena inteiros */numero;
-		String /*armazena texto*/ agencia;
+		Scanner scanner = new Scanner(System.in);
+
 		String nomeCliente;
-		double /*armazenar números com maior magnitude*/ saldo;
-		String sair;
+		String agencia;
+		int conta;
+		double saldo;
+		String encerramento = "saindo...";
+		
+		
+		System.out.println ("CONTA BANCÁRIA");
 
-		System.out.println("--------CONTA BANCÁRIA----------");
-		System.out.println("1 - Por favor, digite o número da Conta: (1234)");
-		numero = sc.nextInt();
+		System.out.println ("Nome do Cliente: ");
+		nomeCliente = scanner.nextLine();
 
-		System.out.println("2 - Por favor, digite o número da Agência: (123-0)");
-		agencia = sc.next();
+		System.out.println ("Digite a Agência:");
+		agencia = scanner.nextLine();
 
-		System.out.println("3 - Mostrar dados: ");
-		nomeCliente = sc.next();
-		sc.nextLine();
+		System.out.println ("Digite a Conta:");
+		conta = scanner.nextInt();
+		scanner.nextLine();
+		
 
-		System.out.println("4 - Mostrar saldo atual: ");
-		saldo = sc.nextDouble();
+		System.out.println("Saldo atual: ");
+		saldo = scanner.nextDouble();
+	
+		scanner.close();
 
-  		System.out.println("0 - Sair -----");
-		leitura.next();
-
-		System.out.println();
-		System.out.printf("Olá %s, obrigado por criar uma conta"
-				+ "nosso banco, sua agência é %s, "
-				+ "conta %d e seu saldo %.2f já está disponível"
-				+ " para saque.", nomeCliente, agencia, numero, saldo, sair);
-
-		sc.close();
+		String mensagem = "Olá " + nomeCliente +", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + " conta " + conta +" e seu saldo " + saldo + " já está disponível para saque.";
+		
+		System.out.println(mensagem);
+		System.out.println(encerramento); 
 	}
-
 }
